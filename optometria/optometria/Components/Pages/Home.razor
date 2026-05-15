@@ -1,7 +1,29 @@
-﻿@page "/"
+@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Inicio</PageTitle>
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+<section class="hero-shell">
+    <div class="hero-card">
+        <span class="auth-kicker">Optometría</span>
+        <h1>Acceso listo para usar</h1>
+        <p>
+            El sistema ya cuenta con registro, inicio de sesión y recuperación de contraseña
+            tanto por vistas Razor como por API para integrarlo con otros módulos.
+        </p>
+        <div class="auth-grid mt-4">
+            <div class="auth-card">
+                <h3>Registro completo</h3>
+                <p>Captura datos personales, documento, contacto, dirección y fecha de nacimiento.</p>
+            </div>
+            <div class="auth-card">
+                <h3>API reutilizable</h3>
+                <p>Expone endpoints para registro, login, sesión activa, logout y recuperación de clave.</p>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+            <a class="btn btn-primary btn-lg" href="/Account/Login">Iniciar sesión</a>
+            <a class="btn btn-outline-primary btn-lg" href="/Account/Register">Crear cuenta</a>
+            <a class="btn btn-link btn-lg" href="/Account/ForgotPassword">Recuperar clave</a>
+        </div>
+    </div>
+</section>
