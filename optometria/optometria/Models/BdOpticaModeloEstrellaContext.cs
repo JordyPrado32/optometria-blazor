@@ -17,7 +17,7 @@ public partial class BdOpticaModeloEstrellaContext : DbContext
 
     public virtual DbSet<TblAbono> TblAbonos { get; set; }
 
-    public virtual DbSet<TblArchivoConsultum> TblArchivoConsulta { get; set; }
+    public virtual DbSet<TblArchivoConsulta> TblArchivoConsulta { get; set; }
 
     public virtual DbSet<TblCategoriaProducto> TblCategoriaProductos { get; set; }
 
@@ -29,7 +29,7 @@ public partial class BdOpticaModeloEstrellaContext : DbContext
 
     public virtual DbSet<TblConsulta> TblConsulta { get; set; }
 
-    public virtual DbSet<TblDetalleVentum> TblDetalleVenta { get; set; }
+    public virtual DbSet<TblDetalleVenta> TblDetalleVenta { get; set; }
 
     public virtual DbSet<TblEnvioLaboratorio> TblEnvioLaboratorios { get; set; }
 
@@ -105,7 +105,7 @@ public partial class BdOpticaModeloEstrellaContext : DbContext
                 .HasConstraintName("fk_abono_venta");
         });
 
-        modelBuilder.Entity<TblArchivoConsultum>(entity =>
+        modelBuilder.Entity<TblArchivoConsulta>(entity =>
         {
             entity.HasKey(e => e.IdArchivoConsulta).HasName("PK__tbl_arch__5E1572429D883D79");
 
@@ -336,7 +336,7 @@ public partial class BdOpticaModeloEstrellaContext : DbContext
                 .HasConstraintName("fk_consulta_paciente");
         });
 
-        modelBuilder.Entity<TblDetalleVentum>(entity =>
+        modelBuilder.Entity<TblDetalleVenta>(entity =>
         {
             entity.HasKey(e => e.IdDetalleVenta).HasName("PK__tbl_deta__5B265D474E76981D");
 
